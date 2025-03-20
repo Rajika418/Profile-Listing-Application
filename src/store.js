@@ -1,35 +1,30 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import userReducer from "./slices/profileSlice";
+import profileReducer from "./slices/profileSlice";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-// Persist config
 const persistConfig = {
   key: "root",
-  storage, // Store in localStorage
-  whitelist: ["user"], // Only persist the 'user' slice
+  storage,
+  whitelist: ["profiles"],
 };
 
-// Combine reducers (if you have multiple slices)
 const rootReducer = combineReducers({
-  user: userReducer,
+  profiles: profileReducer,
 });
 
-// Wrap rootReducer with persistReducer
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// Configure store
 const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"], // Ignore persist actions
+        ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
       },
     }),
 });
 
-// Create persistor for persisting state
 const persistor = persistStore(store);
 
 export { store, persistor };

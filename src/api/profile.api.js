@@ -6,9 +6,9 @@ export const fetchProfilesAPI = async () => {
 
     return response.data;
   } catch (error) {
-    console.error("Fetch User API Error:", error.response || error.message);
+    console.error("Fetch Profile API Error:", error.response || error.message);
     throw new Error(
-      error.response?.data?.message || "Failed to fetch user details"
+      error.response?.data?.message || "Failed to fetch Profile details"
     );
   }
 };
