@@ -19,23 +19,33 @@ const profileSlice = createSlice({
     data: [],
     loading: false,
     error: null,
+    success: false,
   },
-  reducers: {},
+  reducers: {
+    resetProfileState: (state) => {
+      state.success = false;
+      state.error = null;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchProfiles.pending, (state) => {
         state.loading = true;
+        state.success = false;
         state.error = null;
       })
       .addCase(fetchProfiles.fulfilled, (state, action) => {
         state.loading = false;
         state.data = action.payload;
+        state.success = true;
       })
       .addCase(fetchProfiles.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload || "An unknown error occurred";
+        state.success = false;
       });
   },
 });
 
+export const { resetProfileState } = profileSlice.actions;
 export default profileSlice.reducer;
