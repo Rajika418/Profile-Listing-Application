@@ -11,7 +11,7 @@ This application demonstrates:
 - Smooth animations with Framer Motion
 - Client-side routing with React Router
 
-markdown
+
 Profile Listing Application Setup
 
 Follow these steps to set up the project on your local machine.
