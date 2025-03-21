@@ -12,7 +12,7 @@ A React-based profile listing application built with Vite for fast development. 
      
      3.Installed and Configured Tailwind CSS
      -> npm install tailwindcss @tailwindcss/vite :- npm install tailwindcss @tailwindcss/vite.
-     -> Add the @tailwindcss/vite plugin to your Vite configuration.
+     -> Add the @tailwindcss/vite plugin to my Vite configuration.
      -> @import "tailwindcss" :- imports Tailwind CSS to my index.css file.
 
      4.Install Required Packages
