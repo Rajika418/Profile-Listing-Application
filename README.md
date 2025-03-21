@@ -97,6 +97,9 @@ Here's how I constructed this project step by step:
 
 ![Screenshot 2025-03-21 223329](https://github.com/user-attachments/assets/ff17c5d9-1bb1-44f4-9b83-c4ca57ff211e)
 
+![Screenshot 2025-03-21 224858](https://github.com/user-attachments/assets/4bb8fde1-90b7-421d-8e59-464582bee26a)
+
+
 ### 8. Animation Integration
 - Added Framer Motion animations to components
 - Implemented transitions between pages
