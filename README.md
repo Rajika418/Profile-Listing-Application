@@ -99,6 +99,8 @@ Here's how I constructed this project step by step:
 
 ![Screenshot 2025-03-21 224858](https://github.com/user-attachments/assets/4bb8fde1-90b7-421d-8e59-464582bee26a)
 
+![Screenshot 2025-03-21 230045](https://github.com/user-attachments/assets/d8af9b98-a77a-4747-9bff-5b7edbdcd290)
+
 
 ### 8. Animation Integration
 - Added Framer Motion animations to components
