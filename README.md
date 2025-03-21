@@ -53,7 +53,6 @@ npm install react-router-dom
 
 ```
 npm install axios lucide-react framer-motion
-
 ```
 
 ## Development Process
