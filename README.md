@@ -1,12 +1,37 @@
-# React + Vite
+Profile Listing Application.
+A React-based profile listing application built with Vite for fast development. This project uses Redux for state management, Tailwind CSS for styling, and other essential libraries for performance and UI enhancements.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ Project setup instructions.
+ Follow these steps to set up the project on my local machine.
+   
+     1.Create vite + React Project
+     -> npm create vite@latest Profile-Listing-Application --template react
 
-Currently, two official plugins are available:
+     2.Moves into the newly created project folder
+     -> cd Profile-Listing-Application
+     
+     3.Installed and Configured Tailwind CSS
+     -> npm install tailwindcss @tailwindcss/vite :- npm install tailwindcss @tailwindcss/vite.
+     -> Add the @tailwindcss/vite plugin to your Vite configuration.
+     -> @import "tailwindcss" :- imports Tailwind CSS to my index.css file.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+     4.Install Required Packages
+     -> axios:npm install axios :- Handles HTTP requests. 
+     -> redux & @reduxjs/toolkit:npm install redux react-redux @reduxjs/toolkit :- Implements Redux state management efficiently.
+     -> react-redux: npm install react-router-dom :- Connects React components to the Redux store.
+     -> react-router-dom: npm install react-router-dom :- Manages client-side navigation.
+     -> redux-persist: npm install redux-persist :- Persists Redux store data in local storage.
+     -> lucide-react: npm install lucide-react  :- Offers lightweight modern icons.
+     -> framer-motion: npm install framer-motion  :-  Adds animations and transitions for better UI/UX.
 
-## Expanding the ESLint configuration
+     5.Configured redux and router
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+     6.Refactor redux
+
+     7.Designed Pages
+
+     8.Framer motion animation
+
+     9.Refactored redux
+     
+         
