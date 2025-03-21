@@ -18,13 +18,13 @@ Follow these steps to set up the project on your local machine.
 
 1. Create a New Vite Project
 
-bash
+
 npm create vite@latest Profile-Listing-Application --template react
 
 
 2. Navigate to Project Directory
 
-bash
+
 cd Profile-Listing-Application
 
 
@@ -32,31 +32,31 @@ cd Profile-Listing-Application
 
 Core Dependencies
 
-bash
+
 npm install
 
 
 Styling
 
-bash
+
 npm install tailwindcss @tailwindcss/vite
 
 
 State Management
 
-bash
+
 npm install @reduxjs/toolkit react-redux redux-persist
 
 
 Routing
 
-bash
+
 npm install react-router-dom
 
 
 UI and Networking
 
-bash
+
 npm install axios lucide-react framer-motion
 
 ## Development Process
