@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   User,
   Loader,
@@ -9,8 +9,10 @@ import {
   Search,
   ChevronLeft,
   ChevronRight,
+  Eye,
 } from "lucide-react";
 import { fetchProfiles, resetProfileState } from "../slices/profileSlice";
+import NoAvatar from "../assets/no_avatar.png";
 
 const ProfileListing = () => {
   const dispatch = useDispatch();
@@ -25,6 +27,7 @@ const ProfileListing = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(8);
+  const [showSuccess, setShowSuccess] = useState(success);
 
   useEffect(() => {
     dispatch(fetchProfiles());
@@ -32,6 +35,14 @@ const ProfileListing = () => {
       dispatch(resetProfileState());
     };
   }, [dispatch]);
+
+  useEffect(() => {
+    if (success) {
+      setShowSuccess(true);
+      const timer = setTimeout(() => setShowSuccess(false), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [success]);
 
   const handleViewDetails = (clientId) => {
     navigate(`/profile-details/${clientId}`);
@@ -42,16 +53,21 @@ const ProfileListing = () => {
   );
 
   const indexOfLastItem = currentPage * itemsPerPage;
+
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
   const currentProfiles = filteredProfiles.slice(
     indexOfFirstItem,
     indexOfLastItem
   );
+
   const totalPages = Math.ceil(filteredProfiles.length / itemsPerPage);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   const goToNextPage = () =>
     setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+
   const goToPrevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
 
   const container = {
@@ -95,15 +111,22 @@ const ProfileListing = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
         <h1 className="text-2xl font-bold text-gray-800">Client Profiles</h1>
 
-        {success && (
-          <div className="flex items-center text-green-600">
-            <CheckCircle size={20} className="mr-2" />
-            <span>Profiles loaded successfully</span>
-          </div>
-        )}
+        <AnimatePresence>
+          {showSuccess && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center text-green-600 bg-green-100 px-4 py-2 rounded-md shadow-md"
+            >
+              <CheckCircle size={20} className="mr-2" />
+              <span>Profiles loaded successfully</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
-      {/* Search Bar */}
       <div className="relative mb-6">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <Search size={18} className="text-gray-400" />
@@ -131,13 +154,12 @@ const ProfileListing = () => {
             key={profile.client_id}
             variants={item}
             whileHover={{ scale: 1.03 }}
-            className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+            className="bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
           >
             <div className="relative">
               <div className="absolute top-2 left-2 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                 {indexOfFirstItem + index + 1}
               </div>
-
               <div className="h-48 bg-gray-100">
                 {profile.client_profile_url ? (
                   <img
@@ -146,8 +168,7 @@ const ProfileListing = () => {
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       e.target.onerror = null;
-                      e.target.src =
-                        "https://via.placeholder.com/300x200?text=No+Image";
+                      e.target.src = { NoAvatar };
                     }}
                   />
                 ) : (
@@ -167,16 +188,15 @@ const ProfileListing = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => handleViewDetails(profile.client_id)}
-                className="flex items-center justify-center w-full px-4 py-2 bg-blue-500 text-white rounded-md text-sm font-medium hover:bg-blue-600 transition-colors"
+                className="flex items-center justify-center w-full cursor-pointer px-4 py-2 bg-blue-500 text-white rounded-md text-sm font-medium hover:bg-blue-600 transition-colors"
               >
+                <Eye className="mr-2" />
                 View Details
               </motion.button>
             </div>
           </motion.div>
         ))}
       </motion.div>
-
-      {/* Pagination */}
       {filteredProfiles.length > 0 && (
         <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6 mt-6">
           <div className="flex flex-1 justify-between sm:hidden">
