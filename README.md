@@ -11,37 +11,53 @@ This application demonstrates:
 - Smooth animations with Framer Motion
 - Client-side routing with React Router
 
-## Setup Instructions
+markdown
+Profile Listing Application Setup
 
-Follow these steps to set up the project on your local machine:
+Follow these steps to set up the project on your local machine.
 
-### 1. Create a New Vite Project
+1. Create a New Vite Project
+
 bash
 npm create vite@latest Profile-Listing-Application --template react
 
 
-### 2. Navigate to Project Directory
+2. Navigate to Project Directory
+
 bash
 cd Profile-Listing-Application
 
 
-### 3. Install Dependencies
+3. Install Dependencies
+
+Core Dependencies
+
 bash
-# Core dependencies
 npm install
 
-# Styling
+
+Styling
+
+bash
 npm install tailwindcss @tailwindcss/vite
 
-# State Management
+
+State Management
+
+bash
 npm install @reduxjs/toolkit react-redux redux-persist
 
-# Routing
+
+Routing
+
+bash
 npm install react-router-dom
 
-# UI and Networking
-npm install axios lucide-react framer-motion
 
+UI and Networking
+
+bash
+npm install axios lucide-react framer-motion
 
 ## Development Process
 
