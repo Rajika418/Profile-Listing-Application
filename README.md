@@ -5,7 +5,6 @@ A React-based profile listing application built with Vite for fast development. 
 ## Project Overview
 
 This application demonstrates:
-
 - Modern React development with Vite
 - Redux state management with Redux Toolkit
 - Responsive design with Tailwind CSS
@@ -17,94 +16,79 @@ This application demonstrates:
 Follow these steps to set up the project on your local machine:
 
 ### 1. Create a New Vite Project
-
 bash
 npm create vite@latest Profile-Listing-Application --template react
 
-### 2. Navigate to Project Directory
 
+### 2. Navigate to Project Directory
 bash
 cd Profile-Listing-Application
 
+
 ### 3. Install Dependencies
-
 bash
-
 # Core dependencies
-
 npm install
 
 # Styling
-
 npm install tailwindcss @tailwindcss/vite
 
 # State Management
-
 npm install @reduxjs/toolkit react-redux redux-persist
 
 # Routing
-
 npm install react-router-dom
 
 # UI and Networking
-
 npm install axios lucide-react framer-motion
+
 
 ## Development Process
 
 Here's how I constructed this project step by step:
 
 ### 1. Project Initialization
-
 - Set up a new Vite React project
 - Configured the basic project structure
 
 ### 2. Tailwind CSS Integration
-
 - Installed Tailwind CSS and the Vite plugin
 - Added the @tailwindcss/vite plugin to Vite configuration
 - Imported Tailwind CSS in the index.css file
 
 ### 3. Core Dependencies Installation
-
-- _Axios_: For handling HTTP requests
-- _Redux & Redux Toolkit_: For efficient state management
-- _React Router_: For client-side navigation
-- _Redux Persist_: For persisting state in local storage
-- _Lucide React_: For modern, lightweight icons
-- _Framer Motion_: For UI animations and transitions
+- *Axios*: For handling HTTP requests
+- *Redux & Redux Toolkit*: For efficient state management
+- *React Router*: For client-side navigation
+- *Redux Persist*: For persisting state in local storage
+- *Lucide React*: For modern, lightweight icons
+- *Framer Motion*: For UI animations and transitions
 
 ### 4. State Management Implementation
-
 - Set up Redux store configuration
 - Created initial slices with basic reducers
 - Configured the store with Redux Persist
 
 ### 5. Routing Configuration
-
 - Implemented AppRouter for application routing
 - Set up route structure for different pages
 
 ### 6. Redux Enhancement
-
 - Added persistence layer with redux-persist
 - Enhanced slices with actions and extra reducers
 - Optimized state management patterns
 
 ### 7. UI Development
-
 - Designed and implemented page layouts
 - Created reusable components
 - Styled components with Tailwind CSS
 
 ### 8. Animation Integration
-
 - Added Framer Motion animations to components
 - Implemented transitions between pages
 - Enhanced user experience with subtle UI animations
 
 ### 9. Code Organization and Refactoring
-
 - Restructured Redux files for better maintainability
 - Moved slices folder into store folder
 - Final code cleanup and optimization
