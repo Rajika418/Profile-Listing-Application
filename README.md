@@ -34,10 +34,7 @@ A React-based profile listing application built with Vite for fast development. 
      9.Refactored redux
 
 State Management in Profile Handling
- State management is crucial in modern web applications to ensure data consistency and maintain application state efficiently. In this implementation, Redux Toolkit is used for state 
- management along with Redux Persist to maintain the state across sessions.
 
-Steps in State Management
  1.Fetching Data from API and Storing in Redux State
   -> The fetchProfiles async function retrieves data from the API and updates the Redux store.
   -> The response is stored in an array (data) inside the Redux state.
