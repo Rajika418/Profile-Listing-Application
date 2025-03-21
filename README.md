@@ -29,32 +29,32 @@ cd Profile-Listing-Application
 ### 3. Install Dependencies  
 ```
 #### Core Dependencies  
-```
+
 npm install
-```
+
 
 #### Styling  
-```
+
 npm install tailwindcss @tailwindcss/vite
-```
+
 
 #### State Management  
-```
+
 npm install @reduxjs/toolkit react-redux redux-persist
-```
+
 
 #### Routing  
-```
+
 npm install react-router-dom
-```
+
 
 #### UI and Networking  
 
 
-```
+
 npm install axios lucide-react framer-motion
 ```
-```
+
 ## Development Process
 
 Here's how I constructed this project step by step:
