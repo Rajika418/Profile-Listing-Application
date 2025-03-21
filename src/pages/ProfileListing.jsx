@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import {
   User,
@@ -11,7 +12,7 @@ import {
   ChevronRight,
   Eye,
 } from "lucide-react";
-import { fetchProfiles, resetProfileState } from "../slices/profileSlice";
+import { fetchProfiles, resetProfileState } from "../store/slices/profileSlice";
 import NoAvatar from "../assets/no_avatar.png";
 
 const ProfileListing = () => {
@@ -121,7 +122,7 @@ const ProfileListing = () => {
               className="flex items-center text-green-600 bg-green-100 px-4 py-2 rounded-md shadow-md"
             >
               <CheckCircle size={20} className="mr-2" />
-              <span>Profiles loaded successfully</span>
+              <span>Profiles fetched successfully</span>
             </motion.div>
           )}
         </AnimatePresence>
