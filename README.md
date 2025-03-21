@@ -92,6 +92,10 @@ Here's how I constructed this project step by step:
 - Designed and implemented page layouts
 - Created reusable components
 - Styled components with Tailwind CSS
+  
+![Screenshot 2025-03-21 223124](https://github.com/user-attachments/assets/65ad3fcd-cb60-4e97-8362-bfca4e155ad1)
+
+![Screenshot 2025-03-21 223329](https://github.com/user-attachments/assets/ff17c5d9-1bb1-44f4-9b83-c4ca57ff211e)
 
 ### 8. Animation Integration
 - Added Framer Motion animations to components
@@ -129,7 +133,7 @@ Here's how I constructed this project step by step:
    - redux-persist ensures profile state persists after a page refresh.
    - Avoids unnecessary API calls and improves performance.
 
-4. _Using State in Profile Listing Page (ProfileListing.js)_
+4. _Using State in Profile Listing Page (ProfileListing.jsx)_
 
    - ProfileListing retrieves profile data using useSelector from Redux.
    - State properties used:
@@ -143,7 +147,7 @@ Here's how I constructed this project step by step:
      - itemsPerPage: Defines profiles per page.
      - showSuccess: Controls success message visibility.
 
-5. _Navigating to Profile Details (ProfileDetails.js)_
+5. _Navigating to Profile Details (ProfileDetails.jsx)_
 
    - client_id is passed as a route parameter in the handleViewDetails function.
    - User navigates to ProfileDetails page with selected client_id.
