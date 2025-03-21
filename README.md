@@ -106,7 +106,7 @@ Here's how I constructed this project step by step:
 - Final code cleanup and optimization
 
 
-State Management in Profile Handling
+### State Management in Profile Handling
 
 1. Fetching Data from API and Storing in Redux State
 
