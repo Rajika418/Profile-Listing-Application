@@ -17,8 +17,7 @@ A React-based profile listing application built with Vite for fast development. 
 
      4.Install Required Packages
      -> axios:npm install axios :- Handles HTTP requests. 
-     -> redux & @reduxjs/toolkit:npm install redux react-redux @reduxjs/toolkit :- Implements Redux state management efficiently.
-     -> react-redux: npm install react-router-dom :- Connects React components to the Redux store.
+     -> redux & @reduxjs/toolkit:npm install @reduxjs/toolkit react-redux :- Implements Redux state management efficiently
      -> react-router-dom: npm install react-router-dom :- Manages client-side navigation.
      -> redux-persist: npm install redux-persist :- Persists Redux store data in local storage.
      -> lucide-react: npm install lucide-react  :- Offers lightweight modern icons.
