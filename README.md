@@ -27,7 +27,7 @@ cd Profile-Listing-Application
 ```
 
 ### 3. Install Dependencies  
-
+```
 #### Core Dependencies  
 ```
 npm install
@@ -54,7 +54,7 @@ npm install react-router-dom
 ```
 npm install axios lucide-react framer-motion
 ```
-
+```
 ## Development Process
 
 Here's how I constructed this project step by step:
@@ -104,6 +104,7 @@ Here's how I constructed this project step by step:
 - Restructured Redux files for better maintainability
 - Moved slices folder into store folder
 - Final code cleanup and optimization
+
 
 State Management in Profile Handling
 
