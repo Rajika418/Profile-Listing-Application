@@ -90,6 +90,7 @@ Here's how I constructed this project step by step:
 
 ### 7. UI Development
 - Designed and implemented page layouts
+- Created responsive UI to ensure seamless display across various devices (desktop, tablet, and mobile).
 - Styled components with Tailwind CSS
   
 ![Screenshot 2025-03-21 223124](https://github.com/user-attachments/assets/65ad3fcd-cb60-4e97-8362-bfca4e155ad1)
